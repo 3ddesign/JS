@@ -1,18 +1,27 @@
+//Создаем и заполняем массив
 
-function pow(a, b) {
-var result = 1;
+var arr = [];
 
-for (var i = 0; i < b; i++) {
-  result *= a;
+for (var i = 0; i < 5; i++) {
+arr.push(prompt('Введите имя ' + i + ':'));
 }
-  console.log(a + ' в степени ' + b + ' равно ' + result);
- }
 
-var num = prompt("Введите число:");
-var degree = prompt("Введите степень:");
+var name = prompt('Введите имя пользователя:');
+var flag;
 
-if (degree < 0) {
-  alert("Введите корректное значение стемени")
-} else {
-  pow(num, degree)
+//Осуществляем поиск по массиву
+for (var i = 0; i < 5; i++) {
+if (name == arr[i])
+{
+ var flag = true;
+}
+else {}
+}
+
+//Проверяем значение флага и выводим сообще
+if(flag) {
+  alert(name + ", вы успешно вошли.");
+}
+else {
+  alert("Ошибка! Такого имени нет в массиве");
 }
