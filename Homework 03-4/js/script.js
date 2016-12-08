@@ -90,19 +90,11 @@ var myDoc = {
     },
 
     makeButton: function() {
-      var divButton = document.createElement('div');
-      divButton.className = 'col-md-10';
-      divButton.innerHTML = '<button type="button" class="btn btn-primary">Проверить мои результаты</button>';
-      divHeader = container.appendChild(divButton);
+        var divButton = document.createElement('div');
+        divButton.className = 'col-md-10';
+        divButton.innerHTML = '<button type="button" class="btn btn-primary">Проверить мои результаты</button>';
+        divHeader = container.appendChild(divButton);
     },
-
-    insertFormOpen: function() {
-     container.innerHTML = '<form action="#" method="POST">';
-    },
-    insertFormClose: function() {
-     container.innerHTML = '</form>';
-    },
-
 
 }
 
@@ -114,7 +106,6 @@ window.onload = function() {
     myDoc.makeDiv2();
     myDoc.makeDiv3();
     myDoc.makeHeader();
-
     myDoc.makeHeaderQuest1();
     myDoc.makeUl();
     myDoc.makeLiOne();
@@ -127,5 +118,4 @@ window.onload = function() {
     myDoc.makeDiv1();
     myDoc.makeDiv2();
     myDoc.makeButton();
-
 }
