@@ -15,13 +15,13 @@ var myDoc = {
 
     makeDiv2: function() {
         var div2 = document.createElement('div');
-        div2.className = 'col-md-2';
+        div2.className = 'col-xs-2';
         container.appendChild(div2);
     },
 
     makeDiv3: function() {
         var div3 = document.createElement('div');
-        div3.className = 'col-md-10';
+        div3.className = 'col-xs-10';
         divHeader = container.appendChild(div3);
     },
 
@@ -63,6 +63,9 @@ var myDoc = {
         ulOne.appendChild(liFirst);
         ulOne.appendChild(liSecond);
         ulOne.appendChild(liThird);
+        liFirst.className = 'col-lg-12';
+        liSecond.className = 'col-lg-12';
+        liThird.className = 'col-lg-12';
     },
 
     makeLiTwo: function() {
@@ -75,6 +78,9 @@ var myDoc = {
         ulOne.appendChild(liFirst);
         ulOne.appendChild(liSecond);
         ulOne.appendChild(liThird);
+        liFirst.className = 'col-lg-12';
+        liSecond.className = 'col-lg-12';
+        liThird.className = 'col-lg-12';
     },
 
     makeLiThree: function() {
@@ -87,6 +93,9 @@ var myDoc = {
         ulOne.appendChild(liFirst);
         ulOne.appendChild(liSecond);
         ulOne.appendChild(liThird);
+        liFirst.className = 'col-lg-12';
+        liSecond.className = 'col-lg-12';
+        liThird.className = 'col-lg-12';
     },
 
     makeButton: function() {
