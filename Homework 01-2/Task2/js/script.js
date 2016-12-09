@@ -1,3 +1,12 @@
+//Функция поиска по массиву
+
+function search(value, array) {
+    for (var i = 0; i < 5; i++) {
+        if (array[i] == value) return alert(name + ", вы успешно вошли.");
+    }
+    return alert("Ошибка! Такого имени нет в массиве");;
+}
+
 //Создаем и заполняем массив
 
 var arr = [];
@@ -7,18 +16,7 @@ for (var i = 0; i < 5; i++) {
 }
 
 var name = prompt('Введите имя пользователя:');
-var flag;
 
-//Осуществляем поиск по массиву
-for (var i = 0; i < 5; i++) {
-    if (name == arr[i]) {
-        var flag = true;
-    } else {}
-}
+//Запускам поиск по массиву
 
-//Проверяем значение флага и выводим сообще
-if (flag) {
-    alert(name + ", вы успешно вошли.");
-} else {
-    alert("Ошибка! Такого имени нет в массиве");
-}
+search(name, arr);
