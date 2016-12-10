@@ -1,5 +1,6 @@
 window.onload = function() {
 
+    //find all elements and init variables:
     var startB = document.getElementById('startButton');
     var clearB = document.getElementById('clearButton');
     var displaySec1 = document.getElementById('displaySec1');
@@ -18,7 +19,7 @@ window.onload = function() {
     var counterHou2 = 0;
     var clearPress = true;
 
-
+    //Big display function (to 24Hours):
     function someFunction() {
         displaySecFull.innerHTML = counter;
         counter++;
@@ -66,35 +67,44 @@ window.onload = function() {
 
     }
 
-    function startHandler() {
-      
-        timer = setInterval(someFunction, 10);
-
+    //Clear function:
+    function clearHandler() {
+        clearInterval(timer);
+        counter = 0;
+        counterSec1 = 0;
+        counterSec2 = 0;
+        counterMin1 = 0;
+        counterMin2 = 0;
+        counterHou1 = 0;
+        counterHou2 = 0;
+        displaySec1.innerHTML = counterSec1;
+        displaySec2.innerHTML = counterSec2;
+        displayMin1.innerHTML = counterMin1;
+        displayMin2.innerHTML = counterMin2;
+        displayHou1.innerHTML = counterHou1;
+        displayHou2.innerHTML = counterHou2;
+        displaySecFull.innerHTML = counter;
+        clearPress = true
+        startB.className = 'btn btn-success';
+        startB.innerHTML = 'Start';
     }
 
-    startB.addEventListener('click', startHandler);
-    clearB.addEventListener('click', clearHandler);
-
-
-
-
-    function clearHandler() {
+    //Handlers:
+    function startHandler() {
         if (clearPress == true) {
-            clearTimeout(timer);
-            clearB.className = 'btn btn-danger';
-            clearB.innerHTML = 'Clear';
-            clearPress = false;
+            timer = setInterval(someFunction, 10);
+            startB.className = 'btn btn-warning';
+            startB.innerHTML = 'Pause';
+            clearPress = false
         } else {
-            clearInterval(timer);
-            counter = 0;
-            displaySec1.innerHTML = counter;
-            clearB.className = 'btn btn-warning';
-            clearB.innerHTML = 'Pause';
-            clearPress = true;
+            clearTimeout(timer);
+            clearPress = true
+            startB.className = 'btn btn-success';
+            startB.innerHTML = 'Start';
         }
     }
 
-
-
-
+    //Listeners:
+    startB.addEventListener('click', startHandler);
+    clearB.addEventListener('click', clearHandler);
 }
