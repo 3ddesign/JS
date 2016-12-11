@@ -4,6 +4,7 @@ window.onload = function() {
     var startB = document.getElementById('startButton');
     var splitB = document.getElementById('splitButton');
     var resetB = document.getElementById('resetButton');
+    var splitDisp = document.getElementById('splitDisp');
     var displaySec1 = document.getElementById('displaySec1');
     var displaySec2 = document.getElementById('displaySec2');
     var displayMin1 = document.getElementById('displayMin1');
@@ -19,8 +20,15 @@ window.onload = function() {
     var counterHou1 = 0;
     var counterHou2 = 0;
     var clearPress = true;
+    var splitcouner = 0;
+    var splitdisp = ' Split: ';
 
-    //Big display function (to 24Hours):
+    //Listeners:
+    startB.addEventListener('click', startHandler);
+    resetB.addEventListener('click', clearHandler);
+    splitB.addEventListener('click', splitHandler);
+
+    //Big display function (to 24Hours maybe )):
     function someFunction() {
         displaySecFull.innerHTML = counter;
         counter++;
@@ -68,9 +76,10 @@ window.onload = function() {
 
     }
 
-    //Clear function:
+    //Clear(Reset) function:
     function clearHandler() {
         clearInterval(timer);
+        splitcouner = 0;
         counter = 0;
         counterSec1 = 0;
         counterSec2 = 0;
@@ -85,27 +94,34 @@ window.onload = function() {
         displayHou1.innerHTML = counterHou1;
         displayHou2.innerHTML = counterHou2;
         displaySecFull.innerHTML = counter;
+        splitDisp.innerHTML = '';
         clearPress = true
         startB.className = 'btn btn-success';
         startB.innerHTML = 'Start';
     }
 
-    //Handlers:
+    // Other Handlers:
     function startHandler() {
         if (clearPress == true) {
             timer = setInterval(someFunction, 10);
             startB.className = 'btn btn-warning';
-            startB.innerHTML = 'Pause';
+            startB.innerHTML = 'Stop';
             clearPress = false
         } else {
             clearTimeout(timer);
             clearPress = true
             startB.className = 'btn btn-success';
             startB.innerHTML = 'Start';
+            splitdisp = ' Stop: ';
+            splitHandler();
+            splitdisp = ' Split: ';
         }
     }
 
-    //Listeners:
-    startB.addEventListener('click', startHandler);
-    resetB.addEventListener('click', clearHandler);
+    function splitHandler() {
+        splitcouner++;
+        var newP = document.createElement('p');
+        newP.innerHTML = '<p>' + splitcouner + splitdisp + counterHou2 + counterHou1 + ':' + counterMin2 + counterMin1 + ':' + counterSec2 + counterSec1 + '.' + counter + '</p>';
+        splitDisp.appendChild(newP);
+    }
 }
