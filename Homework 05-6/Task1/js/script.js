@@ -23,7 +23,7 @@ window.onload = function() {
     function someFunction() {
         displaySecFull.innerHTML = counter;
         counter++;
-        if (counter > 100) {
+        if (counter > 1000) {
             counter = 0;
             counterSec1++;
             displaySec1.innerHTML = counterSec1;
@@ -84,21 +84,21 @@ window.onload = function() {
         displayHou1.innerHTML = counterHou1;
         displayHou2.innerHTML = counterHou2;
         displaySecFull.innerHTML = counter;
-        clearPress = true
+        clearPress = true;
         startB.className = 'btn btn-success';
         startB.innerHTML = 'Start';
     }
 
-    //Handlers:
+    //Handler:
     function startHandler() {
-        if (clearPress == true) {
-            timer = setInterval(someFunction, 10);
+        if (clearPress === true) {
+            timer = setInterval(someFunction, 1);
             startB.className = 'btn btn-warning';
             startB.innerHTML = 'Pause';
-            clearPress = false
+            clearPress = false;
         } else {
             clearTimeout(timer);
-            clearPress = true
+            clearPress = true;
             startB.className = 'btn btn-success';
             startB.innerHTML = 'Start';
         }
@@ -107,4 +107,4 @@ window.onload = function() {
     //Listeners:
     startB.addEventListener('click', startHandler);
     clearB.addEventListener('click', clearHandler);
-}
+};

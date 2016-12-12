@@ -95,21 +95,21 @@ window.onload = function() {
         displayHou2.innerHTML = counterHou2;
         displaySecFull.innerHTML = counter;
         splitDisp.innerHTML = '';
-        clearPress = true
+        clearPress = true;
         startB.className = 'btn btn-success';
         startB.innerHTML = 'Start';
     }
 
     // Other Handlers:
     function startHandler() {
-        if (clearPress == true) {
+        if (clearPress === true) {
             timer = setInterval(someFunction, 10);
             startB.className = 'btn btn-warning';
             startB.innerHTML = 'Stop';
-            clearPress = false
+            clearPress = false;
         } else {
             clearTimeout(timer);
-            clearPress = true
+            clearPress = true;
             startB.className = 'btn btn-success';
             startB.innerHTML = 'Start';
             splitdisp = ' Stop: ';
@@ -124,4 +124,4 @@ window.onload = function() {
         newP.innerHTML = '<p>' + splitcouner + splitdisp + counterHou2 + counterHou1 + ':' + counterMin2 + counterMin1 + ':' + counterSec2 + counterSec1 + '.' + counter + '</p>';
         splitDisp.appendChild(newP);
     }
-}
+};
