@@ -9,4 +9,7 @@ $(document).ready(function() {
         var tab = this.className.slice(3, 4);
         $('div.window' + tab).show();
     });
+
+  
+
 });
