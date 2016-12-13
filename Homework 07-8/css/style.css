@@ -1,8 +1,7 @@
-div.t2, div.t3, div.t4 {
-  display: none
-}
-
 a {
 cursor: pointer;
+}
 
+.nav {
+margin-top: 30px;
 }
