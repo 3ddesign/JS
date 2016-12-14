@@ -5,3 +5,14 @@ cursor: pointer;
 .nav {
 margin-top: 30px;
 }
+
+.tooltip {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 400px;
+  padding: 10px;
+  background-color: #E7552C;
+  box-sizing: border-box;
+  box-shadow: 10px 7px 30px -7px rgba (0,0,0,0.75);
+}

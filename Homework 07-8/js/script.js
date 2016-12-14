@@ -10,6 +10,10 @@ $(document).ready(function() {
         $('div.window' + tab).show();
     });
 
-  
+      $('#firstname').hover(function() {
+
+$('#firstname').append('<div id="third">Третий</div>').css('background', 'red');
+
+      });
 
 });
