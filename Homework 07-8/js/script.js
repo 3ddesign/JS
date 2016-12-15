@@ -16,7 +16,6 @@ $(document).ready(function() {
             $('.t1').remove();
             $('#tools').parent().append('<div class="t1"><h5>Please provide your firstname.</h5></div>');
             $('.t1').fadeIn(500);
-
         },
         function() {
             $('.t1').fadeOut(300);
@@ -34,9 +33,7 @@ $(document).ready(function() {
 
     $('#address').hover(function() {
             $('.t3').remove();
-
             $('.t1').remove();
-
             $('#tools').parent().append('<div class="t3"><h5>Your home or work address.</h5></div>');
             $('.t3').fadeIn(500);
         },
