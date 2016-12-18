@@ -3,19 +3,52 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Homework 07-8</title>
+    <title>Homework 09-10</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jcarousel.responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.jcarousel.js"></script>
+    <script src="js/jcarousel.responsive.js"></script>
     <script src="js/script.js"></script>
 </head>
-
 <body>
     <div class="container">
 
+
+      <div class="row text-center">
+        <div class="col-xs-2">------</div>
+        <div class="col-xs-8">------</div>
+        <div class="col-xs-2">------</div>
+      </div>
+
+
+        <div class="row text-center">
+            <div class="col-xs-2">.</div>
+            <div class="col-xs-8">
+                <div class="jcarousel-wrapper">
+                    <div class="jcarousel" data-jcarousel="true">
+                        <ul style="left: 0px; top: 0px;">
+                            <li style="width: 200px;"><img src="img/myimg1.jpg" alt="Image 1"></li>
+                            <li style="width: 200px;"><img src="img/myimg4.jpg" alt="Image 4"></li>
+                            <li style="width: 200px;"><img src="img/myimg2.jpg" alt="Image 2"></li>
+                            <li style="width: 200px;"><img src="img/myimg3.jpg" alt="Image 3"></li>
+                            <li style="width: 200px;"><img src="img/myimg5.jpg" alt="Image 5"></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">‹</a>
+                    <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+                    <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
+                </div>
+            </div>
+            <div class="col-xs-2"></div>
+        </div>
+
+
+
+
     </div>
 </body>
-
 </html>
