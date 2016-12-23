@@ -5,50 +5,90 @@
     <meta charset="UTF-8">
     <title>Homework 09-10</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/jcarousel.responsive.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/jquery.selectbox.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/jquery.jcarousel.js"></script>
     <script src="js/jcarousel.responsive.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script type="text/javascript" src="js/jquery.selectbox-0.6.1.js"></script>
+    <script type="text/javascript" src="js/jquery.checkbox.js"></script>
+
 </head>
+
 <body>
-    <div class="container">
+    <div class="wrapper">
 
 
-      <div class="row text-center">
-        <div class="col-xs-2">------</div>
-        <div class="col-xs-8">------</div>
-        <div class="col-xs-2">------</div>
-      </div>
+        <div class="mycarousel">
 
-
-        <div class="row text-center">
-            <div class="col-xs-2">.</div>
-            <div class="col-xs-8">
-                <div class="jcarousel-wrapper">
-                    <div class="jcarousel" data-jcarousel="true">
-                        <ul style="left: 0px; top: 0px;">
-                            <li style="width: 200px;"><img src="img/myimg1.jpg" alt="Image 1"></li>
-                            <li style="width: 200px;"><img src="img/myimg4.jpg" alt="Image 4"></li>
-                            <li style="width: 200px;"><img src="img/myimg2.jpg" alt="Image 2"></li>
-                            <li style="width: 200px;"><img src="img/myimg3.jpg" alt="Image 3"></li>
-                            <li style="width: 200px;"><img src="img/myimg5.jpg" alt="Image 5"></li>
-                        </ul>
-                    </div>
-                    <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">‹</a>
-                    <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
-                    <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel" data-jcarousel="true">
+                    <ul style="left: 0px; top: 0px;">
+                        <li style="width: 200px;"><img src="img/myimg1.jpg" alt="Image 1"></li>
+                        <li style="width: 200px;"><img src="img/myimg4.jpg" alt="Image 4"></li>
+                        <li style="width: 200px;"><img src="img/myimg2.jpg" alt="Image 2"></li>
+                        <li style="width: 200px;"><img src="img/myimg3.jpg" alt="Image 3"></li>
+                        <li style="width: 200px;"><img src="img/myimg5.jpg" alt="Image 5"></li>
+                    </ul>
                 </div>
+                <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">‹</a>
+                <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+                <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
             </div>
-            <div class="col-xs-2"></div>
         </div>
+        <div class="mysel">
+            <select id="default-usage-select">
+          <option value="--">Your favorite color</option>
+          <option value="01">Red</option>
+          <option value="02">Orange</option>
+          <option value="03">Yellow</option>
+          <option value="04">Green</option>
+          <option value="05">Blue</option>
+          <option value="06">Magenta</option>
+          <option value="07">Violet</option>
+          <option value="08">Ultra-violet</option>
+          <option value="09">Ultra-violet</option>
+          <option value="09">Ultra-violet</option>
+        </select>
+        </div>
+        <div class="forms">
+            <form action="#" class="form1">
+                <span class="spantext">Jquery:</span>
+                <div><label for="ch1">label 1</label><span class="niceCheck"><input type="checkbox" name="ch1" id="ch1" value="on" tabindex="1"></span> </div>
+                <div><label for="ch2">label 2</label><span class="niceCheck niceChecked"><input type="checkbox" name="ch2" id="ch2" checked="checked" value="2" tabindex="2"></span></div>
+                <div><label for="ch3">label 3</label><span class="niceCheck niceChecked niceCheckDisabled"><input type="checkbox" name="ch3" id="ch3" checked="checked" value="on" tabindex="0" disabled=""></span></div>
+            </form>
 
+            <form action="#" class="form2">
+                <span class="spantext">CSS:</span>
 
-
-
+                <input type="checkbox" id="test-check1"> <label class="lab2" for="test-check1">label 1</label>
+                <input type="checkbox" id="test-check2" checked> <label class="lab2" for="test-check2">label 2</label>
+                <input type="checkbox" id="test-check3" disabled> <label class="lab2" for="test-check3">label 3</label>
+            </form>
+        </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+        $("#default-usage-select").selectbox().bind('change', function() {
+            $('<div>Value of #default-usage-select changed to: ' + $(this).val() + '</div>').appendTo('#demo-default-usage .demoTarget').fadeOut(5000, function() {
+                $(this).remove();
+            });
+        });
+        //]]>
+    </script>
 </body>
+
 </html>
