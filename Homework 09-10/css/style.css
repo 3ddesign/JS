@@ -1,8 +1,10 @@
 .wrapper {}
 
+
+/*slider*/
 .mycarousel {
     margin: 50px 10% 0 10%;
-}
+  }
 
 .mysel {
     margin: 0 auto;
@@ -16,6 +18,8 @@
     font-weight: bold;
     color: grey;
 }
+
+/*checkboxes*/
 
 .forms {
     margin: 0 auto;
@@ -90,4 +94,86 @@ input[type=checkbox]:checked+label:after {
 
 input[type=checkbox]:disabled+label:after {
     background: url("../img/checkbox-disabled.png");
+}
+
+/*navigation*/
+
+nav {
+    background-color: #258dc8;
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav li ul {
+    background-color: #258dc8;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 200px;
+    z-index: 10;
+}
+
+nav li li {
+    position: relative;
+    margin: 0;
+    display: block;
+}
+
+nav li li ul {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    margin: 0;
+}
+
+nav a {
+    line-height: 40px;
+    padding: 0 12px;
+    margin: 0 12px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+    color:  #ebf1f6;
+}
+
+nav li li a {
+    border-bottom: solid 1px #ebf1f6; 
+    margin: 0 10px;
+    padding: 0;
+}
+
+nav li li:last-child a {
+    border-bottom: none;
+}
+
+nav li.dropdown>a {
+    background-image: url('../img/arrow-down.png');
+    background-position: right 20px;
+    background-repeat: no-repeat;
+}
+
+nav li li.dropdown>a {
+    background-image: url('../img/arrow-right.png');
+    background-position: right 16px;
+    background-repeat: no-repeat;
+}
+
+ul.sub-menu {
+    display: none;
 }
