@@ -1,13 +1,14 @@
-body{
-  height: 700px;
-  background-color: #F5F5F5;
+body {
+    height: 700px;
+    background-color: #F5F5F5;
 }
 
 
 /*slider*/
+
 .mycarousel {
     margin: 50px 10% 0 10%;
-  }
+}
 
 .mysel {
     margin: 0 auto;
@@ -21,6 +22,7 @@ body{
     font-weight: bold;
     color: grey;
 }
+
 
 /*checkboxes*/
 
@@ -99,6 +101,7 @@ input[type=checkbox]:disabled+label:after {
     background: url("../img/checkbox-disabled.png");
 }
 
+
 /*navigation*/
 
 nav {
@@ -152,7 +155,7 @@ nav a {
 }
 
 nav a:hover, nav a:focus, nav a:active {
-    color:  #ebf1f6;
+    color: #ebf1f6;
 }
 
 nav li li a {
@@ -179,4 +182,8 @@ nav li li.dropdown>a {
 
 ul.sub-menu {
     display: none;
+}
+
+.sub-menuсol{
+  background-color: red;
 }
