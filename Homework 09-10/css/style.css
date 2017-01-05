@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
     height: 700px;
     background-color: #F5F5F5;
 }
@@ -186,6 +186,6 @@ ul.sub-menu {
     display: none;
 }
 
-.sub-menuсol{
-  background-color: red;
+.sub-menuсol {
+    background-color: red;
 }

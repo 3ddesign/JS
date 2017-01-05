@@ -1,13 +1,16 @@
 $(document).ready(function() {
 
-    $( '.main-menu' ).hover(
-        function(){
-            $(this).children('.sub-menu').slideDown(600).animate({backgroundColor: '#045F94'});
+    $('.main-menu').hover(
+        function() {
+            $(this).children('.sub-menu').slideDown(600).animate({
+                backgroundColor: '#045F94'
+            });
             $(this).children('.sub-menu').hover(function() {});
-
         },
-        function(){
-            $(this).children('.sub-menu').delay(200).slideUp(300).animate({backgroundColor: '#258dc8'});
+        function() {
+            $(this).children('.sub-menu').delay(200).slideUp(300).animate({
+                backgroundColor: '#258dc8'
+            });
         }
     );
 
@@ -16,5 +19,4 @@ $(document).ready(function() {
             $(this).remove();
         });
     });
-
 });
