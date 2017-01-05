@@ -168,13 +168,13 @@ nav li li:last-child a {
     border-bottom: none;
 }
 
-nav li.dropdown>a {
+nav li.main-menu>a {
     background-image: url('../img/arrow-down.png');
     background-position: right 20px;
     background-repeat: no-repeat;
 }
 
-nav li li.dropdown>a {
+nav li li.main-menu>a {
     background-image: url('../img/arrow-right.png');
     background-position: right 16px;
     background-repeat: no-repeat;
