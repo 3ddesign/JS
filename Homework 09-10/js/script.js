@@ -1,23 +1,12 @@
 $(document).ready(function() {
 
-  $( '.mydiv' ).hover(
-      function(){
-          $(this).animate({backgroundColor: '#045F94'})
-});
-
-
     $( '.main-menu' ).hover(
         function(){
             $(this).children('.sub-menu').slideDown(600).animate({backgroundColor: '#045F94'});
-            $(this).children('.sub-menu').hover(function() {
-
-                  },
+            $(this).children('.sub-menu').hover(function() {},
                   function() {
                         $(this).css('background', '#258dc8');
-
  });
-
-
 
         },
         function(){
