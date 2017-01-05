@@ -3,14 +3,11 @@ $(document).ready(function() {
     $( '.main-menu' ).hover(
         function(){
             $(this).children('.sub-menu').slideDown(600).animate({backgroundColor: '#045F94'});
-            $(this).children('.sub-menu').hover(function() {},
-                  function() {
-                        $(this).css('background', '#258dc8');
- });
+            $(this).children('.sub-menu').hover(function() {});
 
         },
         function(){
-            $(this).children('.sub-menu').delay(200).slideUp(300);
+            $(this).children('.sub-menu').delay(200).slideUp(300).animate({backgroundColor: '#258dc8'});
         }
     );
 
