@@ -106,9 +106,7 @@ var myDoc = {
     },
 
 }
-
 // Create DOM elements when page ready
-
 window.onload = function() {
     myDoc.makeContainer();
     myDoc.makeDiv1();
