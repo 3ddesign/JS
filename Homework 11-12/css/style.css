@@ -1,5 +1,6 @@
 .carousel-list {
     list-style: none;
+    width: 10000px;
 }
 
 .carousel-element {
@@ -10,4 +11,9 @@
 
 .carousel-element img {
     max-width: 100px;
+}
+
+.carousel-hider {
+	width: 600px;
+	overflow: hidden;
 }
