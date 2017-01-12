@@ -5,66 +5,66 @@ body {
 .wrapper {
     margin: auto;
     width: 500px;
-    height: 1024px;
-
-}
-h1{
-font-family: "Arial";
-font-size: 36px;
-font-weight: bold;
-text-align: center;
+    height: 960px;
 }
 
-.pic
-{
-	   margin: auto;
-width: 200px;
-height: 200px;
-	       border: 1px solid #8f8f8f;
-background-color: #0055d3;
+a {
+    color: #0056d3;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    margin-left: 37px;
+    font-style: italic;
 }
 
-.text1{
-opacity: .8;
-color: #1f1f1f;
-font-family: "Arial";
-font-size: 14px;
-}
-h5{
-color: #1f1f1f;
-font-family: "Myriad Pro";
-font-size: 18px;
-font-weight: bold;
-
-}
-p{
-color: #1f1f1f;
-font-family: "Myriad Pro";
-font-size: 14px;
-margin-left: 37px;
-
+h1 {
+    font-family: "Arial";
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
 }
 
-li{
-color: #1f1f1f;
-font-family: "Myriad Pro";
-font-size: 14px;
+img {
+    margin: 5px 150px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #8f8f8f;
+    background-color: #0055d3;
 }
 
-.links{
-color: #0056d3;
-font-family: "Myriad Pro";
-font-size: 14px;
-margin-left: 37px;
-font-style: italic;
+h5 {
+    color: #1f1f1f;
+    font-family: "Myriad Pro";
+    font-size: 18px;
+    font-weight: bold;
 }
 
-hr{
-  display: block;
-      -webkit-margin-before: 0.5em;
-      -webkit-margin-after: 0.5em;
-      -webkit-margin-start: auto;
-      -webkit-margin-end: auto;
-      border-style: inset;
-      border-width: 1px;
+p {
+    color: #1f1f1f;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    margin-left: 37px;
+}
+
+li {
+    color: #1f1f1f;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+}
+
+.links {
+    color: #0056d3;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    margin-left: 37px;
+    font-style: italic;
+}
+
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
 }

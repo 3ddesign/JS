@@ -10,18 +10,47 @@
     <script src="js/script.js"></script>
     <script src="js/tmpl.js"></script>
 </head>
+
 <body>
 
-<script type="text/html" id="mycont">
-  <div class="wrapper">
+    <script type="text/html" id="mycont">
+        <div class="wrapper">
+            <h1><%= content.name %></h1>
+            <img src="<%= content.img_path %>" alt="">
+            <p>
+                <%= content.education %>
+            </p>
 
-  <% for (var i = 0; i < data.length; i++) { %>
-  <h5><%= data[i].h1 %></h5>
-  <p><%= data[i].text %><p>
-      <%= data[i].hr %>
-    <% }; %>
-  </div>
-</script>
+            <hr>
+            <h5><%= content.header1 %></h5>
+            <ul>
+                <li>
+                    <%= content.ul1 %>
+                </li>
+                <li>
+                    <%= content.ul2 %>
+                </li>
+                <li>
+                    <%= content.ul3 %>
+                </li>
+            </ul>
+            <hr>
+            <h5><%= content.header2 %></h5>
+            <p>
+                <%= content.phone %>
+            </p>
+            <hr>
+            <h5><%= content.header3 %></h5>
+            <a href="<%= content.facebook %>">
+                <%= content.facebook %>
+            </a>
+            <hr>
+            <h5><%= content.header4 %></h5>
+            <p>
+                <%= content.feedback %>
+            </p>
+        </div>
+    </script>
 
 
 </body>
