@@ -1,15 +1,23 @@
 $(document).ready(function() {
-"use strict";
-
-
+    "use strict";
     $("#check").click(function() {
-
         if ($("#three_first").is(':checked') && $("#two_second").is(':checked') && $("#one_third").is(':checked') && $("#three_third").is(':checked')) {
-            alert('верно!');
-            $("input:checkbox").prop("checked", false);
 
+
+          $('body').append(('<div id="openModal" class="overlay"><div><a href="#close" class="close">X</a><p>Все ответы верны!<br>Поздравляем!</p></div></div>'));
+          $(".close").click(function() {
+              $("#openModal").remove();
+          });
+
+
+            $("input:checkbox").prop("checked", false);
         } else {
-            alert('не верно!');
+
+            $('body').append(('<div id="openModal" class="overlay"><div><a href="#close" class="close">X</a><p>Вы допустили ошибку в ответе попробуйте еще раз</p></div></div>'));
+            $(".close").click(function() {
+                $("#openModal").remove();
+            });
+
             $("input:checkbox").prop("checked", false);
 
         }
