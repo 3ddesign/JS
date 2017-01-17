@@ -1,15 +1,6 @@
 $(document).ready(function() {
-    "use strict";
+    // "use strict";
 
-    // to LS
-
-
-    // from LS
-
-
-    // Render with tmpl.js
-
-    var html = $('#quiz').html();
     var quizContent = {
         question1: '1. Что такое jQuery плагины?',
         answer1: 'Часть функционала jQuery, вынесенная в отдельный файл',
@@ -19,11 +10,24 @@ $(document).ready(function() {
         answer4: 'Файл CSS стилей',
         answer5: 'Javascript файл',
         answer6: 'html файл',
-        question3: '3. В каком объекте не хранятся все jQuery-функции?',
+        question3: '3. В каком объекте не хранятся jQuery-функции?',
         answer7: 'jQuery.function',
         answer8: 'jQuery.fn',
         answer9: 'jQuery.prototype',
     };
+
+    // to LS
+// localStorage.setItem();
+
+
+    // from LS
+// localStorage.getItem();
+// localStorage.cler();
+
+
+    // Render with tmpl.js
+
+    var html = $('#quiz').html();
     var myQuiz = tmpl(html, {
         content: quizContent
     });
