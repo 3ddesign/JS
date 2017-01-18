@@ -16,11 +16,11 @@ $(document).ready(function() {
         answer9: 'jQuery.prototype',
     };
 
-    // to LS
-// localStorage.setItem();
+    // to localS torage
+localStorage.setItem('quizj', JSON.stringify(quizContent));
+console.log(quizContent);
 
-
-    // from LS
+    // from localS torage
 // localStorage.getItem();
 // localStorage.cler();
 
