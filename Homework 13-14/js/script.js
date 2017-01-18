@@ -1,5 +1,6 @@
 $(document).ready(function() {
     "use strict";
+
     var allQuestions = {
         question1: '1. Что такое jQuery плагины?',
         answer1: 'Часть функционала jQuery, вынесенная в отдельный файл',
@@ -15,10 +16,10 @@ $(document).ready(function() {
         answer9: 'jQuery.prototype',
     };
 
-    // to localS torage
+    // to local Storage
     localStorage.setItem('quizj', JSON.stringify(allQuestions));
 
-    // from localS torage
+    // from local Storage
     var quizContent = JSON.parse(localStorage.getItem('quizj'));
 
     // Render with tmpl.js
