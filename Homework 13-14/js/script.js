@@ -1,7 +1,6 @@
 $(document).ready(function() {
-    // "use strict";
-
-    var quizContent = {
+    "use strict";
+    var allQuestions = {
         question1: '1. Что такое jQuery плагины?',
         answer1: 'Часть функционала jQuery, вынесенная в отдельный файл',
         answer2: 'Особые возможности jQuery',
@@ -17,16 +16,12 @@ $(document).ready(function() {
     };
 
     // to localS torage
-localStorage.setItem('quizj', JSON.stringify(quizContent));
-console.log(quizContent);
+    localStorage.setItem('quizj', JSON.stringify(allQuestions));
 
     // from localS torage
-// localStorage.getItem();
-// localStorage.cler();
-
+    var quizContent = JSON.parse(localStorage.getItem('quizj'));
 
     // Render with tmpl.js
-
     var html = $('#quiz').html();
     var myQuiz = tmpl(html, {
         content: quizContent
@@ -34,7 +29,6 @@ console.log(quizContent);
     $('body').append(myQuiz);
 
     // Modal and check
-
     $("#check").click(function() {
         if ($("#three_first").is(':checked') && $("#two_second").is(':checked') && $("#one_third").is(':checked') && $("#three_third").is(':checked')) {
             $('body').append(('<div id="openModal" class="overlay"><div><a href="#close" class="close">X</a><p>Все ответы верны!<br>Поздравляем!</p></div></div>'));
@@ -50,7 +44,4 @@ console.log(quizContent);
             $("input:checkbox").prop("checked", false);
         }
     });
-
-
-
 });
