@@ -31,23 +31,17 @@ $(document).ready(function() {
     $('body').append(myQuiz);
 
     // Modal and check
-
     $("#check").click(function() {
-
         var checkArr = $('input:checkbox').map(function() {
             return this.checked;
         }).get();
-
         var flag = true;
         for (var i = 0; i < checkArr.length; i++) {
             if (checkArr[i] == quizContent.rightAnswers[i]) {
-
-
             } else {
                 flag = false;
             }
         }
-
         if (flag === true) {
             $('body').append(('<div id="openModal" class="overlay"><div><a href="#close" class="close">X</a><p>Все ответы верны!<br>Поздравляем!</p></div></div>'));
             $(".close").click(function() {
@@ -62,5 +56,4 @@ $(document).ready(function() {
             $("input:checkbox").prop("checked", false);
         }
     });
-
 });
