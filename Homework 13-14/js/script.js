@@ -14,6 +14,7 @@ $(document).ready(function() {
         answer7: 'jQuery.function',
         answer8: 'jQuery.fn',
         answer9: 'jQuery.prototype',
+        rightAnswers: [false, false, true, false, true, false, true, false, true],
     };
 
     // to local Storage
@@ -30,8 +31,24 @@ $(document).ready(function() {
     $('body').append(myQuiz);
 
     // Modal and check
+
     $("#check").click(function() {
-        if ($("#three_first").is(':checked') && $("#two_second").is(':checked') && $("#one_third").is(':checked') && $("#three_third").is(':checked')) {
+
+        var checkArr = $('input:checkbox').map(function() {
+            return this.checked;
+        }).get();
+
+        var flag = true;
+        for (var i = 0; i < checkArr.length; i++) {
+            if (checkArr[i] == quizContent.rightAnswers[i]) {
+
+
+            } else {
+                flag = false;
+            }
+        }
+
+        if (flag === true) {
             $('body').append(('<div id="openModal" class="overlay"><div><a href="#close" class="close">X</a><p>Все ответы верны!<br>Поздравляем!</p></div></div>'));
             $(".close").click(function() {
                 $("#openModal").remove();
@@ -45,4 +62,5 @@ $(document).ready(function() {
             $("input:checkbox").prop("checked", false);
         }
     });
+
 });
