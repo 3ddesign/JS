@@ -1,21 +1,17 @@
-function GoogleCallback() {
-    console.log('arguments', arguments);
-}
-
+$(document).ready(function() {
 $(function() {
 
 
-
-    $.ajax({
-        url: 'https://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=large&q=' + 'test1' + '&callback=GoogleCallback&context=?',
-        dataType: 'jsonp'
-
-    });
-
+  var URL = "https://pixabay.com/api/?key="+'4341489-c7135f07e924eb271481ce96f'+"&q="+encodeURIComponent('red roses');
+  $.getJSON(URL, function(data){
+      if (parseInt(data.totalHits) > 0)
+          $.each(data.hits, function(i, hit){ console.log(hit.pageURL); });
+      else
+          console.log('No hits');
+  });
+});
 });
 
 
 
-
-//
-// "The Google Web Search API is no longer available. Please migrate to the Google Custom Search API (https://developers.google.com/custom-search/)"
+// А гугл сказал: "The Google Web Search API is no longer available. Please migrate to the Google Custom Search API (https://developers.google.com/custom-search/)"
