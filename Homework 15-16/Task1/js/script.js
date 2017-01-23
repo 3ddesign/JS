@@ -1,15 +1,15 @@
 $(document).ready(function() {
-$(function() {
-
-
-  var URL = "https://pixabay.com/api/?key="+'4341489-c7135f07e924eb271481ce96f'+"&q="+encodeURIComponent('red roses');
-  $.getJSON(URL, function(data){
-      if (parseInt(data.totalHits) > 0)
-          $.each(data.hits, function(i, hit){ console.log(hit.pageURL); });
-      else
-          console.log('No hits');
-  });
-});
+    $(function() {
+        var URL = "https://pixabay.com/api/?key=" + '4341489-c7135f07e924eb271481ce96f' + "&q=" + encodeURIComponent('red roses');
+        $.getJSON(URL, function(data) {
+            if (parseInt(data.totalHits) > 0)
+                $.each(data.hits, function(i, hit) {
+                    console.log(hit.pageURL);
+                });
+            else
+                console.log('No hits');
+        });
+    });
 });
 
 
