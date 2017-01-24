@@ -1,13 +1,23 @@
 $(document).ready(function() {
+
+var request = $('.search');
+console.log(request);
+
     $(function() {
-        var URL = "https://pixabay.com/api/?key=" + '4341489-c7135f07e924eb271481ce96f' + "&q=" + encodeURIComponent('red roses');
+        var URL = "https://pixabay.com/api/?key=" + '4341489-c7135f07e924eb271481ce96f' + "&q=" + encodeURIComponent('kids');
         $.getJSON(URL, function(data) {
-            if (parseInt(data.totalHits) > 0)
+            var num = 1;
+            if (parseInt(data.totalHits) > 2)
                 $.each(data.hits, function(i, hit) {
-                    console.log(hit.pageURL);
+
+                    $('.searchresult').append('<a target="_blank" href="' + hit.pageURL + '">' + hit.pageURL + '</a>');
+                    num++;
+                    if (num == 12) {
+                        exit();
+                    }
                 });
             else
-                console.log('No hits');
+                    $('.searchresult').append('<p>По Вашему запросу ничего не найдено...</p>');
         });
     });
 });
