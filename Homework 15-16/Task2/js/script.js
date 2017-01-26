@@ -15,7 +15,9 @@
         };
     }
 
+
     Worker.prototype = new Human("Oleg", 24, "Male", 180, 80);
+
 
     function Student(study, scholarship) {
         this.study = study || 'student`s study';
