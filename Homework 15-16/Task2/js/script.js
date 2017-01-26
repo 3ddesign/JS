@@ -1,5 +1,7 @@
+// corrected
 
-    function Human(name, age, gender, hight, weight) {
+
+  function Human(name, age, gender, hight, weight) {
         this.name = name || 'humans`s name';
         this.age = age || 'humans`s age';
         this.gender = gender || 'humans`s gender';
