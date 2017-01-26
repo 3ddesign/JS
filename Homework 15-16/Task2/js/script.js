@@ -1,3 +1,4 @@
+
     function Human(name, age, gender, hight, weight) {
         this.name = name || 'humans`s name';
         this.age = age || 'humans`s age';
