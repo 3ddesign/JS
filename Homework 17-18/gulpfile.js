@@ -23,7 +23,7 @@ gulp.task('scripts', function() {
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('app/js'));
+        .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('browser-sync', function() {
@@ -46,13 +46,15 @@ gulp.task('clear', function() {
 
 gulp.task('img', function() {
     return gulp.src('app/img/**/*')
-    .pipe(cache(imagemin({
-      interlaced: true,
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngquant()]
-    })))
-    .pipe(gulp.dest('dist/img'));
+        .pipe(cache(imagemin({
+            interlaced: true,
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            use: [pngquant()]
+        })))
+        .pipe(gulp.dest('dist/img'));
 });
 
 

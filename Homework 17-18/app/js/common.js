@@ -10,6 +10,7 @@ $(document).ready(function() {
         $('div.window' + tab).show();
     });
 
+
     //Tooltips:
 
     $('#firstname').focus(function() {
