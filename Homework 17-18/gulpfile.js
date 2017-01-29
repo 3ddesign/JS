@@ -22,7 +22,7 @@ gulp.task('libs', function() {
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('app/js/libs'));
 });
 
 gulp.task('sass', function() {
@@ -69,19 +69,22 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('watch', ['browser-sync', 'js', 'sass'], function() {
+gulp.task('default', ['browser-sync', 'js', 'sass', 'libs'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/common.js', browserSync.reload);
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'libs', 'js'], function() {
+gulp.task('build', ['clean', 'img', 'sass', 'js'], function() {
 
     var buildFonts = gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'));
 
     var buildJs = gulp.src('app/js/common.js')
         .pipe(gulp.dest('dist/js'));
+
+    var buildLibs = gulp.src('app/js/libs/libs.min.js')
+        .pipe(gulp.dest('dist/js/libs'));
 
     var buildCss = gulp.src('app/css/*.css')
         .pipe(gulp.dest('dist/css'));
