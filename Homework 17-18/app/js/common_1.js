@@ -28,7 +28,6 @@ $(document).ready(function() {
         $('.t3').remove();
     });
 
-
     $('#firstname').hover(function() {
             $('.t1').remove();
             $('#tools').parent().append('<div class="t1"><h5>Please provide your firstname.</h5></div>');

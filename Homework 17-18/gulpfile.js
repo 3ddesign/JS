@@ -10,10 +10,13 @@ var gulp = require('gulp'),
     uglifycss = require('gulp-uglifycss');
 
 gulp.task('js', function() {
-    return gulp.src('app/js/*.js')
+    return gulp.src('app/js/common_*.js')
         .pipe(uglify())
         .pipe(concat('common.js'))
-        .pipe(gulp.dest('app/js/'));
+        .pipe(gulp.dest('app/js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 gulp.task('libs', function() {
@@ -72,7 +75,7 @@ gulp.task('img', function() {
 gulp.task('default', ['browser-sync', 'js', 'sass', 'libs'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/common.js', browserSync.reload);
+    gulp.watch('app/js/*.js', ['js']);
 });
 
 gulp.task('build', ['clean', 'img', 'sass', 'js'], function() {

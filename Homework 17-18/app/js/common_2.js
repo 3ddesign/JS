@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     //Tabs:
     $('div.window2').hide();
     $('div.window3').hide();
