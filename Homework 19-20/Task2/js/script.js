@@ -274,7 +274,12 @@ var myjson =  [
   }
 ];
 
+// Parse JSON
 var string = JSON.stringify(myjson);
 var data = JSON.parse(string);
 
-console.log(data);
+// skills array
+
+var skills = _.find(data,  [data.skills]);
+
+console.log(skills);
