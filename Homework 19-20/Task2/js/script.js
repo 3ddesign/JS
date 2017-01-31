@@ -284,10 +284,22 @@ var data = JSON.parse(string);
 var skills = _.map(data, "skills");
 skills = _.flatten(skills);
 skills = _.uniq(skills);
+skills = _.sortBy(skills);
 
 console.log('Skills array:', skills);
 
+
 // names array:
-var names = _.map(data, "name");
+var names = _.sortBy(data, function(o) { return o.friends.length; });
+names = _.map(names, "name");
+names = _.reverse(names);
 
 console.log('Names array:', names);
+
+
+// // friends array:
+// var friends = _.map(data, "friends");
+// friends = _.flatten(friends);
+// friends = _.uniq(friends);
+//
+// console.log('friends array:', friends);
