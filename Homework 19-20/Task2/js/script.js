@@ -280,6 +280,7 @@ var myjson =  [
 var string = JSON.stringify(myjson);
 var data = JSON.parse(string);
 
+
 // skills array:
 var skills = _.map(data, "skills");
 skills = _.flatten(skills);
@@ -297,9 +298,10 @@ names = _.reverse(names);
 console.log('Names array:', names);
 
 
-// // friends array:
-// var friends = _.map(data, "friends");
-// friends = _.flatten(friends);
-// friends = _.uniq(friends);
-//
-// console.log('friends array:', friends);
+ // friends array:
+var friends = _.map(data, "friends");
+ friends = _.flatten(friends, "name");
+ friends = _.map(friends, "name");
+ friends = _.uniq(friends);
+
+console.log('Friends array:', friends);
