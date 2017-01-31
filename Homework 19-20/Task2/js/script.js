@@ -1,3 +1,5 @@
+// Paste JSON: (or import?)
+
 var myjson =  [
   {
     "guid": "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
@@ -274,12 +276,18 @@ var myjson =  [
   }
 ];
 
-// Parse JSON
+// Parse JSON:
 var string = JSON.stringify(myjson);
 var data = JSON.parse(string);
 
-// skills array
+// skills array:
+var skills = _.map(data, "skills");
+skills = _.flatten(skills);
+skills = _.uniq(skills);
 
-var skills = _.find(data,  [data.skills]);
+console.log('Skills array:', skills);
 
-console.log(skills);
+// names array:
+var names = _.map(data, "name");
+
+console.log('Names array:', names);
