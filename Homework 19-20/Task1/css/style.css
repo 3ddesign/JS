@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'Ubuntu_Condensed';
+    src: url('../fonts/ubuntu-condensed_allfont.ru-webfont.eot');
+    src: url('../fonts/ubuntu-condensed_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-condensed_allfont.ru-webfont.woff2') format('woff2'), url('../fonts/ubuntu-condensed_allfont.ru-webfont.woff') format('woff'), url('../fonts/ubuntu-condensed_allfont.ru-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu Light';
+    src: url('../fonts/ubuntu-light_allfont.ru-webfont.eot');
+    src: url('../fonts/ubuntu-light_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-light_allfont.ru-webfont.woff2') format('woff2'), url('../fonts/ubuntu-light_allfont.ru-webfont.woff') format('woff'), url('../fonts/ubuntu-light_allfont.ru-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu Medium';
+    src: url('../fonts/ubuntu-medium_allfont.ru-webfont.eot');
+    src: url('../fonts/ubuntu-medium_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-medium_allfont.ru-webfont.woff2') format('woff2'), url('../fonts/ubuntu-medium_allfont.ru-webfont.woff') format('woff'), url('../fonts/ubuntu-medium_allfont.ru-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: : #000;
 }
@@ -8,6 +32,23 @@ body {
     width: 1159px;
 }
 
-.logo_img {
+.logo_name {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    color: #434343;
+    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-size: 30px;
+}
 
+.logo_subname {
+    display: inline-block;
+    opacity: .65;
+    letter-spacing: 0.28em;
+        margin-left: 7px;
+    color: #333;
+    font-size: 12px;
+    font-family: "Ubuntu Light", Arial, sans-serif;
+    text-transform: uppercase;
 }
