@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Ubuntu_Condensed';
+    src: url('../fonts/ubuntu-condensed_allfont.ru-webfont.eot');
+    src: url('../fonts/ubuntu-condensed_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-condensed_allfont.ru-webfont.woff2') format('woff2'), url('../fonts/ubuntu-condensed_allfont.ru-webfont.woff') format('woff'), url('../fonts/ubuntu-condensed_allfont.ru-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu Light';
+    src: url('../fonts/ubuntu-light_allfont.ru-webfont.eot');
+    src: url('../fonts/ubuntu-light_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-light_allfont.ru-webfont.woff2') format('woff2'), url('../fonts/ubuntu-light_allfont.ru-webfont.woff') format('woff'), url('../fonts/ubuntu-light_allfont.ru-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu Medium';
+    src: url('../fonts/ubuntu-medium_allfont.ru-webfont.eot');
+    src: url('../fonts/ubuntu-medium_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-medium_allfont.ru-webfont.woff2') format('woff2'), url('../fonts/ubuntu-medium_allfont.ru-webfont.woff') format('woff'), url('../fonts/ubuntu-medium_allfont.ru-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wrapper {
+    display: block;
+    margin: 0 auto;
+    width: 1159px;
+}
+/*logo side*/
+.logo {
+    margin-left: 5px;
+    width: 230px;
+    margin-top: 8px;
+}
+
+.logo_name {
+    display: inline-block;
+    margin-left: 4px;
+    margin-top: -3px;
+    position: absolute;
+    color: #434343;
+    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-size: 30px;
+}
+
+.logo_subname {
+    display: inline-block;
+    opacity: 0.65;
+    letter-spacing: 0.28em;
+    margin-left: 7px;
+    color: #333;
+    font-size: 12px;
+    font-family: "Ubuntu Light", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.socials_list {
+    margin-top: -62px;
+    margin-right: 2px;
+    margin-left: 5px;
+    display: inline-block;
+    float: right;
+    list-style: none;
+}
+
+.socials li {
+    display: inline-block;
+    line-height: 40px;
+    padding-left: 12px;
+}
+
+.socials_facebook {
+    display: block;
+    height: 17px;
+    width: 13px;
+    background: url("../img/icons1.png") 0 0;
+}
+
+.socials_twitter {
+    display: block;
+    height: 17px;
+    width: 18px;
+    background: url("../img/icons1.png") 115px 0;
+}
+
+.socials_rss {
+    display: block;
+    height: 17px;
+    width: 18px;
+    background: url("../img/icons1.png") 82px 0;
+}
+
+.socials_linkedin {
+    display: block;
+    height: 17px;
+    width: 18px;
+    background: url("../img/icons1.png") 50px 0;
+}
+
+.socials_skype {
+    display: block;
+    height: 17px;
+    width: 18px;
+    background: url("../img/icons1.png") 18px 0;
+}
+
+.socials_facebook:hover {
+    background: url("../img/icons1.png") 0 17px;
+}
+
+.socials_twitter:hover {
+    background: url("../img/icons1.png") 115px 17px;
+}
+
+.socials_rss:hover {
+    background: url("../img/icons1.png") 82px 17px;
+}
+
+.socials_linkedin:hover {
+    background: url("../img/icons1.png") 50px 17px;
+}
+
+.socials_skype:hover {
+    background: url("../img/icons1.png") 18px 17px;
+}
+/*navigation menu*/
+.mainmenu {
+    margin-top: 34px;
+    height: 56px;
+    width: 1160px;
+    display: block;
+    background-color: #2a2d32;
+}
+
+.mainmenu ul {
+    padding: 0;
+}
+
+.mainmenu li {
+    display: inline-block;
+    padding-left: 0;
+}
+
+.mainmenu li a {
+    padding-right: 40px;
+    padding-left: 36px;
+    padding-top: 8px;
+    text-align: center;
+    height: 48px;
+    display: block;
+    border-right: 1px solid black;
+    font-size: 14px;
+    font-family: "Ubuntu_Condensed", Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.mainmenu li:first-child {
+    background-color: #248cec;
+}
+
+.mainmenu li a:hover {
+    color: #f4b60d;
+}
+
+.searchfield {
+    float: right;
+    margin-right: 8px;
+    margin-top: -48px;
+    background-color: #35383c;
+    height: 39px;
+    width: 240px;
+    border: 1px solid black;
+    background-image: url("../img/searchicon.svg");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 211px;
+}
+
+.searchfield::-webkit-input-placeholder {
+    padding-left: 13px;
+    color: #535659;
+}
+/*slider section*/
+.slider {
+    margin: 40px auto;
+    background-image: url("../img/slider.png");
+    width: 1160px;
+    height: 470px;
+}
+
+.threesections {}
