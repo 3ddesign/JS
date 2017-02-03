@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.basic.js"></script>
     <script src="js/common.js"></script>
 </head>
 
@@ -40,7 +43,21 @@
                 <input type="search" name="Search" placeholder="Search..." class="searchfield">
             </nav>
 
-<section class="slider"> </section>
+<section class="slider">
+  <div class="jcarousel-wrapper">
+      <div class="jcarousel" data-jcarousel="true">
+          <ul style="left: -1200px; top: 0px;">
+              <li><img src="img/slider.png" width="1160" height="470" alt=""></li>
+              <li><img src="img/slider2.png" width="1160" height="470" alt=""></li>
+              <li><img src="img/slider3.png" width="1160" height="470" alt=""></li>
+
+          </ul>
+      </div>
+
+
+      <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class=""></a><a href="#2" class=""></a><a href="#3" class="active"></a></p>
+  </div>
+</section>
 
 
 <section class="blocks">

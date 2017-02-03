@@ -62,10 +62,10 @@
     list-style: none;
 }
 
-.socials li {
+.socials li  {
     display: inline-block;
     line-height: 40px;
-    padding-left: 12px;
+
 }
 
 .socials_facebook {
@@ -76,6 +76,7 @@
 }
 
 .socials_twitter {
+  margin-left: 13px;
     display: block;
     height: 17px;
     width: 18px;
@@ -83,6 +84,7 @@
 }
 
 .socials_rss {
+    margin-left: 10px;
     display: block;
     height: 17px;
     width: 18px;
@@ -90,6 +92,7 @@
 }
 
 .socials_linkedin {
+    margin-left: 10px;
     display: block;
     height: 17px;
     width: 18px;
@@ -97,6 +100,7 @@
 }
 
 .socials_skype {
+    margin-left: 10px;
     display: block;
     height: 17px;
     width: 18px;
@@ -181,12 +185,8 @@
     padding-left: 13px;
     color: #535659;
 }
+
 /*slider section*/
-.slider {
-    margin: 40px auto;
-    background-image: url("../img/slider.png");
-    width: 1160px;
-    height: 470px;
-}
+
 
 .threesections {}
