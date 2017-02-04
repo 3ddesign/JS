@@ -30,7 +30,9 @@
 .trheecol__arrowicon{display:inline-block;height:11px;width:15px;background-image:url("../img/iconsvect.svg");background-size:271px auto;background-position:-146px 50px}
 .trheecol__link:hover{color:#248cec}.trheecol__link:hover .trheecol__arrowicon{background-position:-127px 50px}
 .services_wrapper{margin-top:81px;width:100%;height:500px;background-color:#2a2d32}
-.services{border:2px solid black;margin:0 auto;width:1159px}.services__text{margin-top:44px;color:#fff;font-family:"Ubuntu Medium",Arial,sans-serif;font-size:24px}
-.services__serv{margin-top:52px;margin-right:33px;width:260px;height:309px;border:1px solid black;display:inline-block}
-.services__servlast{margin-top:52px;margin-right:0;width:260px;height:309px;border:1px solid black;display:inline-block}
-.services a{text-decoration:none}.services__serv--text{margin-top:30px;color:#fff;font-family:"Ubuntu Medium",Arial,sans-serif;font-size:16px;text-align:center}
+.services{border:1px solid #2a2d32;margin:0 auto;width:1159px}.services__text{margin-top:44px;color:#fff;font-family:"Ubuntu Medium",Arial,sans-serif;font-size:24px}
+.services__serv{margin-top:52px;margin-right:33px;width:260px;height:309px;display:inline-block}
+.services__servlast{margin-top:52px;margin-right:0;width:260px;height:309px;display:inline-block}
+.services__serv--text{margin-top:30px;color:#fff;font-family:"Ubuntu Medium",Arial,sans-serif;font-size:16px;text-align:center}
+.services a{text-decoration:none}.services a:hover .services__serv--cover{display:block}
+.services__serv--cover{display:none;position:absolute}

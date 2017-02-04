@@ -322,7 +322,7 @@
 }
 
 .services {
-    border: 2px solid black;
+    border: 1px solid #2a2d32;
     margin: 0 auto;
     width: 1159px;
 }
@@ -339,27 +339,36 @@
     margin-right: 33px;
     width: 260px;
     height: 309px;
-    border: 1px solid black;
+
     display: inline-block;
 }
 
 .services__servlast {
     margin-top: 52px;
-    margin-right: 0px;
+    margin-right: 0;
     width: 260px;
     height: 309px;
-    border: 1px solid black;
+
     display: inline-block;
 }
 
-.services a {
-  text-decoration: none;
-}
 .services__serv--text {
-  margin-top: 30px;
+    margin-top: 30px;
     color: #fff;
     font-family: "Ubuntu Medium", Arial, sans-serif;
     font-size: 16px;
     text-align: center;
+}
 
+
+.services a {
+  text-decoration: none;
+}
+.services a:hover .services__serv--cover {
+display: block;
+}
+
+.services__serv--cover {
+ display: none;
+  position: absolute;
 }
