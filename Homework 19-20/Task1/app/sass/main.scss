@@ -498,8 +498,8 @@ position: absolute;
 .accordion section {
 
 	margin-bottom: 5px;
-	background-color: #fff;
-	background-image:linear-gradient(top, #fff, #eee);
+
+
 	}
 .accordion h2, .accordion p {
 	margin: 0;
@@ -544,24 +544,31 @@ font-family: Arial, sans-serif;
 	content: '+';
 	position: absolute;
 	left: 18px;
-font-size: 13px;
+  font-size: 13px;
 	margin-top: 0px;
 	}
 
+.accordion :target h2 a {
+
+  background-color: #f4b60d;
+  }
+
   .accordion :target h2 a:after {
+    font-family: Tahoma;
   	content: '+';
   	position: absolute;
-  	left: 18px;
-  font-size: 13px;
+  	left: 16px;
+  font-size: 16px;
   	margin-top: 0px;
   	}
 
 .accordion h2 a:after {
+      font-family: Tahoma;
   	content: '-';
   	position: absolute;
   	left: 18px;
   	margin-top: 0px;
-    font-size: 13px;
+    font-size: 16px;
   	}
 
 .accordion :target h2 + div {
