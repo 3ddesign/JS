@@ -389,15 +389,14 @@
     display: inline-block;
     width: 560px;
     height: 462px;
-    border: 1px solid black;
     margin-right: 35px;
 }
 
 .news__banner {
+  position: absolute;
     display: inline-block;
     width: 556px;
     height: 462px;
-    border: 1px solid black;
 }
 
 .news__header {
@@ -490,3 +489,93 @@
 }
 
 //*accordion*/
+
+.accordion {
+position: absolute;
+	width: 558px;
+      height: 330px;
+	}
+.accordion section {
+
+	margin-bottom: 5px;
+	background-color: #fff;
+	background-image:linear-gradient(top, #fff, #eee);
+	}
+.accordion h2, .accordion p {
+	margin: 0;
+
+	}
+.accordion p {
+  color: #8a8a8a;
+  background-color: #f7f7f7;
+font-family: Arial, sans-serif;
+  font-size: 13px;
+  padding: 29px;
+  line-height: 19px;
+	}
+.accordion h2 a {
+	width: 540px;
+  height: 19px;
+
+  background-color: #fff;
+  font-family: "Ubuntu Medium", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+	display: block;
+	position: relative;
+  padding-top: 12px;
+  padding-bottom: 8px;
+	padding-left: 55px;
+	color: #2a2d32;
+	text-decoration: none;
+
+	}
+.accordion h2 a:hover {
+  background-color: #fff;
+
+	}
+.accordion h2 + div {
+	height: 0;
+	overflow: hidden;
+
+	transition: height 0.3s ease-in-out;
+	}
+.accordion :target h2 a:after {
+	content: '+';
+	position: absolute;
+	left: 18px;
+font-size: 13px;
+	margin-top: 0px;
+	}
+
+  .accordion :target h2 a:after {
+  	content: '+';
+  	position: absolute;
+  	left: 18px;
+  font-size: 13px;
+  	margin-top: 0px;
+  	}
+
+.accordion h2 a:after {
+  	content: '-';
+  	position: absolute;
+  	left: 18px;
+  	margin-top: 0px;
+    font-size: 13px;
+  	}
+
+.accordion :target h2 + div {
+
+	height: 155px;
+    background-color: #f7f7f7;
+	}
+.accordion hr {
+  margin-top: -2px;
+  margin-left: 40px;
+  position: absolute;
+  border: 0;
+  background-color: #f7f7f7;
+  width: 2px;
+  height: 42px;
+  z-index: 1;
+}
