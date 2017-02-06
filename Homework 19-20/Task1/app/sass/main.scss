@@ -54,7 +54,7 @@
 }
 
 .socials_list {
-    margin-top: -62px;
+    margin-top: -27px;
     margin-right: 2px;
     margin-left: 5px;
     display: inline-block;
@@ -144,10 +144,12 @@
 }
 
 .mainmenu li a {
+
     padding-right: 40px;
     padding-left: 36px;
     padding-top: 8px;
     text-align: center;
+    line-height: 37px;
     height: 48px;
     display: block;
     border-right: 1px solid black;
@@ -393,7 +395,7 @@
 }
 
 .news__banner {
-  position: absolute;
+    position: absolute;
     display: inline-block;
     width: 556px;
     height: 462px;
@@ -487,59 +489,53 @@
     font-family: Arial, sans-serif;
     font-size: 13px;
 }
-
 //*accordion*/
 
 .accordion {
-position: absolute;
-	width: 558px;
-      height: 330px;
-	}
+    position: absolute;
+  	width: 558px;
+    height: 330px;
+}
 .accordion section {
+    margin-bottom: 5px;
+}
 
-	margin-bottom: 5px;
-
-
-	}
-.accordion h2, .accordion p {
-	margin: 0;
-
-	}
+.accordion h2,
 .accordion p {
-  color: #8a8a8a;
-  background-color: #f7f7f7;
-font-family: Arial, sans-serif;
-  font-size: 13px;
-  padding: 29px;
-  line-height: 19px;
-	}
+    margin: 0;
+}
+
+.accordion p {
+    color: #8a8a8a;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 29px;
+    line-height: 19px;
+}
 .accordion h2 a {
-	width: 540px;
-  height: 19px;
-
-  background-color: #fff;
-  font-family: "Ubuntu Medium", Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 13px;
-	display: block;
-	position: relative;
-  padding-top: 12px;
-  padding-bottom: 8px;
-	padding-left: 55px;
-	color: #2a2d32;
-	text-decoration: none;
-
-	}
+    width: 540px;
+    height: 19px;
+    background-color: #fff;
+    font-family: "Ubuntu Medium", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    display: block;
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 55px;
+    color: #2a2d32;
+    text-decoration: none;
+}
 .accordion h2 a:hover {
-  background-color: #fff;
-
-	}
+    background-color: #fff;
+}
 .accordion h2 + div {
-	height: 0;
-	overflow: hidden;
-
-	transition: height 0.3s ease-in-out;
-	}
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
 .accordion :target h2 a:after {
 	content: '+';
 	position: absolute;
@@ -549,7 +545,6 @@ font-family: Arial, sans-serif;
 	}
 
 .accordion :target h2 a {
-
   background-color: #f4b60d;
   }
 
@@ -558,12 +553,12 @@ font-family: Arial, sans-serif;
   	content: '+';
   	position: absolute;
   	left: 16px;
-  font-size: 16px;
+    font-size: 16px;
   	margin-top: 0px;
   	}
 
 .accordion h2 a:after {
-      font-family: Tahoma;
+  	font-family: Tahoma;
   	content: '-';
   	position: absolute;
   	left: 18px;
@@ -572,17 +567,47 @@ font-family: Arial, sans-serif;
   	}
 
 .accordion :target h2 + div {
-
-	height: 155px;
-    background-color: #f7f7f7;
+  	height: 155px;
+  	background-color: #f7f7f7;
 	}
+
 .accordion hr {
-  margin-top: -2px;
-  margin-left: 40px;
-  position: absolute;
-  border: 0;
-  background-color: #f7f7f7;
-  width: 2px;
-  height: 42px;
-  z-index: 1;
+  	margin-top: -2px;
+  	margin-left: 40px;
+  	position: absolute;
+  	border: 0;
+  	background-color: #f7f7f7;
+  	width: 2px;
+  	height: 42px;
+    z-index: 1;
+}
+
+//*brands*/
+.brands {
+  padding-top: 88px;
+  margin: 0 auto;
+    width: 1159px;
+    height: 152px;
+}
+
+.brands img {
+padding-left: 30px;
+padding-right: 36px;
+}
+
+//*menu`s blok*/
+
+.bmenus {
+
+    width: 100%;
+    height: 325px;
+    background-color: #2a2d32;
+}
+
+//*footer blok*/
+
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: #35383c;
 }
