@@ -1,24 +1,4 @@
-@font-face {
-    font-family: 'Ubuntu_Condensed';
-    src: url('../fonts/ubuntu-condensed_allfont.ru-webfont.eot');
-    src: url('../fonts/ubuntu-condensed_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-condensed_allfont.ru-webfont.woff2') format('woff2'), url('../fonts/ubuntu-condensed_allfont.ru-webfont.woff') format('woff'), url('../fonts/ubuntu-condensed_allfont.ru-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Ubuntu Light';
-    src: url('../fonts/ubuntu-light_allfont.ru-webfont.eot');
-    src: url('../fonts/ubuntu-light_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-light_allfont.ru-webfont.woff2') format('woff2'), url('../fonts/ubuntu-light_allfont.ru-webfont.woff') format('woff'), url('../fonts/ubuntu-light_allfont.ru-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Ubuntu Medium';
-    src: url('../fonts/ubuntu-medium_allfont.ru-webfont.eot');
-    src: url('../fonts/ubuntu-medium_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ubuntu-medium_allfont.ru-webfont.woff2') format('woff2'), url('../fonts/ubuntu-medium_allfont.ru-webfont.woff') format('woff'), url('../fonts/ubuntu-medium_allfont.ru-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@import 'fonts';
 
 .wrapper {
     display: block;
@@ -38,7 +18,7 @@
     margin-top: -3px;
     position: absolute;
     color: #434343;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 30px;
 }
 
@@ -49,7 +29,7 @@
     margin-left: 7px;
     color: #333;
     font-size: 12px;
-    font-family: "Ubuntu Light", Arial, sans-serif;
+    font-family: $fontL;
     text-transform: uppercase;
 }
 
@@ -144,7 +124,6 @@
 }
 
 .mainmenu li a {
-
     padding-right: 40px;
     padding-left: 36px;
     padding-top: 8px;
@@ -154,7 +133,7 @@
     display: block;
     border-right: 1px solid black;
     font-size: 14px;
-    font-family: "Ubuntu_Condensed", Arial, sans-serif;
+    font-family: $fontC;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
@@ -176,7 +155,7 @@
     height: 39px;
     width: 240px;
     border: 1px solid black;
-    background-image: url("../img/searchicon.svg");
+    background-image: url("../img/svg/searchicon.svg");
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: 211px;
@@ -192,7 +171,7 @@
     display: inline-block;
     height: 70px;
     width: 83px;
-    background-image: url('../img/iconsvect.svg');
+    background-image: url('../img/svg/iconsvect.svg');
     background-size: 271px auto;
     background-position: 0 0;
 }
@@ -203,7 +182,7 @@
     margin-left: 33px;
     height: 34px;
     width: 38px;
-    background-image: url('../img/iconsvect.svg');
+    background-image: url('../img/svg/iconsvect.svg');
     background-size: 271px auto;
     background-position: 0 62px;
 }
@@ -213,7 +192,7 @@
     display: inline-block;
     height: 70px;
     width: 88px;
-    background-image: url('../img/iconsvect.svg');
+    background-image: url('../img/svg/iconsvect.svg');
     background-size: 271px auto;
     background-position: 188px 0;
 }
@@ -224,7 +203,7 @@
     margin-left: 33px;
     height: 34px;
     width: 38px;
-    background-image: url('../img/iconsvect.svg');
+    background-image: url('../img/svg/iconsvect.svg');
     background-size: 271px auto;
     background-position: -40px 64px;
 }
@@ -234,7 +213,7 @@
     display: inline-block;
     height: 70px;
     width: 88px;
-    background-image: url('../img/iconsvect.svg');
+    background-image: url('../img/svg/iconsvect.svg');
     background-size: 271px auto;
     background-position: 89px 0;
 }
@@ -245,7 +224,7 @@
     margin-left: 33px;
     height: 34px;
     width: 38px;
-    background-image: url('../img/iconsvect.svg');
+    background-image: url('../img/svg/iconsvect.svg');
     background-size: 271px auto;
     background-position: -80px 60px;
 }
@@ -277,7 +256,7 @@
 
 .trheecol__header {
     color: #292b2d;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 20px;
 }
 
@@ -294,7 +273,7 @@
     margin-top: 2px;
     text-decoration: none;
     color: #292b2d;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 13px;
 }
 
@@ -302,7 +281,7 @@
     display: inline-block;
     height: 11px;
     width: 15px;
-    background-image: url('../img/iconsvect.svg');
+    background-image: url('../img/svg/iconsvect.svg');
     background-size: 271px auto;
     background-position: -146px 50px;
 }
@@ -332,7 +311,7 @@
 .services__text {
     margin-top: 44px;
     color: #fff;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 24px;
 }
 
@@ -355,7 +334,7 @@
 .services__serv--text {
     margin-top: 30px;
     color: #fff;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 16px;
     text-align: center;
 }
@@ -404,7 +383,7 @@
 .news__header {
     margin-top: 60px;
     color: #2a2d32;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 24px;
     margin-bottom: 45px;
 }
@@ -427,7 +406,7 @@
     text-align: center;
     padding-top: 30%;
     color: #fff;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 15px;
 }
 
@@ -445,7 +424,7 @@
     text-align: center;
     padding-top: 30%;
     color: #000;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 18px;
 }
 
@@ -458,7 +437,7 @@
 .news__block1--textblock h3 {
     margin-top: 7px;
     color: #2a2d32;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 16px;
 }
 
@@ -493,96 +472,59 @@
 
 .accordion {
     position: absolute;
-  	width: 558px;
+    width: 570px;
     height: 330px;
 }
-.accordion section {
-    margin-bottom: 5px;
+
+.accordion-item {
+    background-image: url('../img/accordion/acc1.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    margin-bottom: 7px;
+    padding-left: 55px;
+    color: #2a2d32;
+    text-decoration: none;
+    width: 505px;
+    height: 19px;
+    font-size: 13px;
+    font-family: $fontM;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    cursor: pointer;
 }
 
-.accordion h2,
-.accordion p {
-    margin: 0;
+.accordion-item.open {
+    background: #f4b60d;
+    border-bottom: 0;
+    color: #fff;
+    background-image: url('../img/accordion/acc2.png');
+    background-position: left;
+    background-repeat: no-repeat;
 }
 
-.accordion p {
+.accordion-item.open .type {
+    float: right;
+    padding: 10px;
+}
+
+.accordion-item .type {
+    float: right;
+    padding: 10px;
+}
+
+div.data {
     color: #8a8a8a;
     background-color: #f7f7f7;
     font-family: Arial, sans-serif;
     font-size: 13px;
     padding: 29px;
     line-height: 19px;
+    display: none;
 }
-.accordion h2 a {
-    width: 540px;
-    height: 19px;
-    background-color: #fff;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 13px;
-    display: block;
-    position: relative;
-    padding-top: 12px;
-    padding-bottom: 8px;
-    padding-left: 55px;
-    color: #2a2d32;
-    text-decoration: none;
-}
-.accordion h2 a:hover {
-    background-color: #fff;
-}
-.accordion h2 + div {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease-in-out;
-}
-.accordion :target h2 a:after {
-	content: '+';
-	position: absolute;
-	left: 18px;
-  font-size: 13px;
-	margin-top: 0px;
-	}
-
-.accordion :target h2 a {
-  background-color: #f4b60d;
-  }
-
-  .accordion :target h2 a:after {
-    font-family: Tahoma;
-  	content: '+';
-  	position: absolute;
-  	left: 16px;
-    font-size: 16px;
-  	margin-top: 0px;
-  	}
-
-.accordion h2 a:after {
-  	font-family: Tahoma;
-  	content: '-';
-  	position: absolute;
-  	left: 18px;
-  	margin-top: 0px;
-    font-size: 16px;
-  	}
-
-.accordion :target h2 + div {
-  	height: 155px;
-  	background-color: #f7f7f7;
-	}
-
-.accordion hr {
-  	margin-top: -2px;
-  	margin-left: 40px;
-  	position: absolute;
-  	border: 0;
-  	background-color: #f7f7f7;
-  	width: 2px;
-  	height: 42px;
-    z-index: 1;
-}
-
-//*brands*/
 
 .brands {
     padding-top: 88px;
@@ -596,6 +538,7 @@
     padding-right: 36px;
 }
 //*menu`s blok*/
+
 .bmenus {
     margin: 0 auto;
     width: 100%;
@@ -616,7 +559,7 @@
 .bmenus div h6 {
     color: #fff;
     text-transform: uppercase;
-    font-family: "Ubuntu Medium", Arial, sans-serif;
+    font-family: $fontM;
     font-size: 16px;
 }
 
@@ -647,34 +590,31 @@
     color: #248cec;
 }
 //*footer*/
+
 footer {
-
     width: 100%;
-
     background-color: #35383c;
 }
 
 footer a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .footer_content {
-  margin: 0 auto;
-  width: 1160px;
-  padding-top: 20px;
-  height: 60px;
-  background-color: #35383c;
+    margin: 0 auto;
+    width: 1160px;
+    padding-top: 20px;
+    height: 40px;
+    background-color: #35383c;
 }
-.footer__point {
-  margin-top: -5px;
-  position: absolute;
 
+.footer__point {
+    margin-top: -5px;
+    position: absolute;
     width: 14px;
     height: 23px;
-    background-image: url('../img/iconsvect.svg');
-
+    background-image: url('../img/svg/iconsvect.svg');
     opacity: 0.25;
-
     background-size: 271px auto;
     background-position: 257px 23px;
 }
@@ -682,22 +622,23 @@ footer a {
 .footer__phone {
     margin-top: -7px;
     position: absolute;
-  margin-left: 20px;
+    margin-left: 20px;
     width: 14px;
     height: 23px;
-    background-image: url('../img/iconsvect.svg');
+    background-image: url('../img/svg/iconsvect.svg');
     display: inline-block;
     opacity: 0.25;
     background-size: 271px auto;
     background-position: 235px 23px;
 }
+
 .footer__mail {
     margin-top: -5px;
     position: absolute;
     margin-left: 22px;
     width: 16px;
     height: 23px;
-    background-image: url('../img/iconsvect.svg');
+    background-image: url('../img/svg/iconsvect.svg');
     display: inline-block;
     opacity: 0.25;
     background-size: 271px auto;
