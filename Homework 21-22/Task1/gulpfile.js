@@ -21,9 +21,9 @@ gulp.task('js', function() {
 
 gulp.task('libs', function() {
     return gulp.src([
-            'app/libs/jquery/dist/jquery.min.js',
+            'app/libs/tmpl/tmpl.js',
         ])
-        .pipe(concat('libs.min.js'))
+        .pipe(concat('tmpl.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('app/js/libs'));
 });
@@ -78,7 +78,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'js'], function() {
     var buildJs = gulp.src('app/js/*.js')
         .pipe(gulp.dest('dist/js'));
 
-    var buildLibs = gulp.src('app/js/libs/libs.min.js')
+    var buildLibs = gulp.src('app/js/libs/*.js')
         .pipe(gulp.dest('dist/js/libs'));
 
     var buildCss = gulp.src('app/css/*.css')
