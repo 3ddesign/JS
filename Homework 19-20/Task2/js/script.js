@@ -278,6 +278,7 @@ $(function() {
     var skills = _.map(data,  "skills");
     skills = _.flatten(skills);
     skills = _.uniq(skills);
+
     function sortArr(a, b) {
         a = _.lowerCase(a);
         b = _.lowerCase(b);
@@ -302,15 +303,6 @@ $(function() {
 
 
     // friends array:
-    // function un(friends) {
-    //     var obj = {};
-    //     for (var i = 0; i < friends.length; i++) {
-    //         var str = friends[i];
-    //         obj[str] = true;
-    //     }
-    //     return Object.keys(obj);
-    // }
-
     var friends = _.map(data,  "friends");
     friends = _.flatten(friends,  "name");
     friends = _.map(friends,  "name");
@@ -322,7 +314,7 @@ $(function() {
         if (a < b)
             return -1;
         if (a == b)
-            return ;
+            return;
     }
 
     console.log('Friends array:', friends.sort(friendsArr));
