@@ -278,16 +278,18 @@ $(function() {
     var skills = _.map(data,  "skills");
     skills = _.flatten(skills);
     skills = _.uniq(skills);
-    var SortSkills = [];
-    skills = _.forEach(skills, function(value) {
-        value = _.lowerCase(value);
-        SortSkills.push(value);
-    });
-    SortSkills = _.sortBy(SortSkills);
+    function sortArr(a, b) {
+        a = _.lowerCase(a);
+        b = _.lowerCase(b);
+        if (a > b)
+            return 1;
+        if (a < b)
+            return -1;
+        if (a == b)
+            return 0;
+    }
 
-    console.log('Skills array:', SortSkills);
-
-
+    console.log('Skills array:', skills.sort(sortArr));
 
     // // names array:
     var names = _.sortBy(data, function(o) {
@@ -300,19 +302,28 @@ $(function() {
 
 
     // friends array:
-    function un(friends) {
-        var obj = {};
-        for (var i = 0; i < friends.length; i++) {
-            var str = friends[i];
-            obj[str] = true;
-        }
-        return Object.keys(obj);
-    }
+    // function un(friends) {
+    //     var obj = {};
+    //     for (var i = 0; i < friends.length; i++) {
+    //         var str = friends[i];
+    //         obj[str] = true;
+    //     }
+    //     return Object.keys(obj);
+    // }
 
     var friends = _.map(data,  "friends");
     friends = _.flatten(friends,  "name");
     friends = _.map(friends,  "name");
-    var AllFriends = un(friends);
+    friends = _.uniq(friends);
 
-    console.log('Friends array:', AllFriends);
+    function friendsArr(a, b) {
+        if (a > b)
+            return 1;
+        if (a < b)
+            return -1;
+        if (a == b)
+            return ;
+    }
+
+    console.log('Friends array:', friends.sort(friendsArr));
 });
