@@ -19,15 +19,6 @@ gulp.task('js', function() {
         }));
 });
 
-gulp.task('libs', function() {
-    return gulp.src([
-            'app/libs/tmpl/tmpl.js',
-        ])
-        .pipe(concat('tmpl.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('app/js/libs'));
-});
-
 gulp.task('sass', function() {
     return gulp.src('app/sass/*.scss')
         .pipe(sass())
@@ -64,7 +55,7 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('default', ['browser-sync', 'js', 'sass', 'libs'], function() {
+gulp.task('default', ['browser-sync', 'js', 'sass'], function() {
     gulp.watch('app/sass/**/*.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/*.js', ['js']);
