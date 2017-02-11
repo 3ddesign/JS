@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    "use strict";
-
     const allQuestions = {
         question1: `1. Что такое jQuery плагины?`,
         answer1: `Часть функционала jQuery, вынесенная в отдельный файл`,
