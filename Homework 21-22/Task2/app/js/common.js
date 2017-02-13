@@ -21,7 +21,7 @@ $(document).ready(function() {
     // from local Storage
     let quizContent = JSON.parse(localStorage.getItem('quizj'));
 
-    // Render with tmpl.js
+    // Render
     const html = $('#quiz').html();
     const myQuiz = tmpl(html, {
         content: quizContent
