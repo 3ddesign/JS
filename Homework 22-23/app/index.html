@@ -13,6 +13,26 @@
 
 <body>
 
+    <script type="text/template" id="wrapper-template">
+
+        <div class="wrapper">
+            <ul class="item-list">
+
+            </ul>
+            <div class="controlls">
+                <input type="text" class="item-value">
+                <button class="item-add">Add</button>
+            </div>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="list-template">
+      <% for (var i = 0; i < data.length; i++) { %>
+        <li><%= data[i] %><span class="item-delete">x</span></li>
+        <% }; %>
+    </script>
+
 
 </body>
 
