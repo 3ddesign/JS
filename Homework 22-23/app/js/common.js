@@ -1,10 +1,11 @@
-function Model() {
+
+function Model(data) {
     var self = this;
 
-    self.data = ['test 1', 'test 2', 'test 3'];
+    self.data = data;
 
     self.addItem = function(item) {
-        if (item.length === 0) {
+        if (item.length === 0){
             return;
         }
 
@@ -16,37 +17,66 @@ function Model() {
     self.removeItem = function(item) {
         var index = self.data.indexOf(item);
 
-        if (index === -1) {
+        if (index === -1){
             return;
         }
 
         self.data.splice(index, 1);
 
         return self.data;
-
     };
-
 }
 
 function View(model) {
     var self = this;
 
-    self.init = function() {
+    function init() {
         var wrapper = tmpl($('#wrapper-template').html());
-        $('body').html(wrapper);
 
-        
+        $('body').append(wrapper);
+        self.elements = {
+            input: $('.item-value'),
+            addBtn: $('.item-add'),
+            listContainer: $('.item-list')
+        };
+        self.renderList(model.data);
     };
 
     self.renderList = function(data) {
-
+        var list = tmpl($('#list-template').html(), {data: data});
+        self.elements.listContainer.html(list);
     };
 
-    self.init();
+    init();
+}
+
+function Controller(model, view) {
+var self = this;
+
+view.elements.addBtn.on('click', addItem);
+view.elements.listContainer.on('click', '.item-delete', removeItem);
+
+function addItem(){
+ var newItem = view.elements.input.val();
+
+model.addItem(newItem);
+view.renderList(model.data);
+view.elements.input.val('');
+}
+
+function removeItem() {
+   var item = $(this).attr('data-value');
+
+    model.removeItem(item);
+    view.renderList(model.data);
+}
 
 }
 
 
-function Controller() {
-
-}
+$(function () {
+var firstToDoList = ['test 1', 'test 2', 'test 3'];
+var model = new Model(firstToDoList);
+var view = new View(model);
+var controller = new Controller(model, view);
+});
